@@ -1,0 +1,43 @@
+# Control de versiones
+# El historial de git no se necesita en la imagen y puede ser pesado.
+.git/
+.gitignore
+
+# Entorno virtual local
+# Docker instala las dependencias desde requirements.txt dentro de la imagen.
+# El venv local es incompatible con el sistema operativo del contenedor.
+venv/
+.venv/
+env/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Tests y reportes
+# Útil para imágenes de producción que no deben correr tests.
+# Para imágenes de CI, remover estas líneas.
+# tests/
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Variables de entorno locales
+# Las variables se inyectan en runtime via docker-compose o -e flag.
+# NUNCA deben estar embebidas en la imagen.
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Documentación y archivos de desarrollo
+README.md
+*.md
+docs/

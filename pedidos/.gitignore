@@ -1,0 +1,54 @@
+# Entorno virtual de Python
+# En este proyecto no se usa venv — las dependencias corren dentro de Docker.
+# De todas formas es buena práctica ignorarlos por si alguien lo crea localmente.
+venv/
+.venv/
+env/
+.env/
+
+# Variables de entorno y secretos
+# CRÍTICO: archivos .env contienen API keys, contraseñas, tokens.
+# Crear un archivo .env.example (sin valores reales) como referencia.
+.env
+.env.local
+.env..local
+
+# Caché de Python
+# Python genera estos archivos automáticamente; no aportan nada al repo.
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Cobertura de tests
+# Reportes generados por pytest-cov; se regeneran con cada ejecución.
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# pytest
+.pytest_cache/
+.cache/
+
+# IDEs y editores
+# Configuraciones locales del editor que varían por persona.
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker
+# Volúmenes locales de docker-compose (si los hubiera).
+docker-compose.override.yml
+
+# Distribución / builds
+dist/
+build/
+*.egg-info/

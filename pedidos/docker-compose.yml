@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    environment:
+      - ENTORNO=pruebas  # cambiar a 'produccion' para la demo final
+      - PYTHONPATH=/app   # permite importar 'src.x.y' desde cualquier punto
+    volumes:
+      - .:/app           # monta el código local dentro del contenedor
+    working_dir: /app     # asegura que los imports relativos funcionen
+    stdin_open: true      # necesario para la terminal interactiva (bash)
+    tty: true

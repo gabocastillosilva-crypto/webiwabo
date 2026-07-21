@@ -51,4 +51,4 @@ docker-compose.override.yml
 # Distribución / builds
 dist/
 build/
-*.egg-info/
+*.egg-info/ 
